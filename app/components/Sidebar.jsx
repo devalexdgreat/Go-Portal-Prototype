@@ -28,7 +28,7 @@ export default function Sidebar() {
                 <div className="w-full mt-10 text-[#DADADA]">
                     <div className="">
                         <Link href={'/'} className="w-10/12 mx-auto py-3 flex items-center gap-2" alt=""><RiDashboardFill className="h-5 w-5" /><span>Dashboard</span></Link>
-                        <button onClick={toggleHostel} className="border-s-4 bg-gradient-to-r from-green-400/10 to-transparent border-green-400 py-3 w-full" alt="">
+                        <button onClick={toggleHostel} className={`${!open ? "py-3" :  "border-s-4 bg-gradient-to-r from-green-400/10 to-transparent border-green-400 " } py-3 w-full`} alt="">
                             <div className="w-10/12 mx-auto flex items-center justify-between">
                                 <span className="flex gap-2 items-center">
                                     <HiOfficeBuilding className="h-5 w-5" /><span>Hostel</span>
@@ -38,7 +38,7 @@ export default function Sidebar() {
                             
                         </button>
                         {open ? ( 
-                            <div className="ps-3">
+                            <div className="ps-9">
                                 <Link href={'/dashboard'} className="py-3 flex items-center gap-2" alt=""><BsDot className="text-green-500 h-6 w-6" /><span>Choose Hostel</span></Link>
                                 <Link href={'/dashboard'} className="py-3 flex items-center gap-2" alt=""><BsDot className="text-red-500 h-6 w-6" /><span>Hostel History</span></Link>
                             </div>
