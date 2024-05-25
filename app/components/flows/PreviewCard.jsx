@@ -1,8 +1,8 @@
-export default function PreviewCard({ selected, semSelected, roomSelected, hostelSelected, bunkSelected }) {
+export default function PreviewCard({ selected, semSelected, roomSelected, hostelSelected, bunkSelected, handleNext }) {
     return (
         <div className="w-9/12">
             <div className="w-full h-screen justify-center flex items-center">
-            <div className="w-6/12 mx-auto bg-blue-100/10 rounded-md border border-gray-300 p-10 flex justify-center flex-col items-center">
+            <div className="w-6/12 mx-auto bg-blue-200/10 rounded-md border border-gray-300 p-10 flex justify-center flex-col items-center">
                 <div>
                 <h1 className="font-semibold text-lg mb-4">Book Hostel Preview</h1>
                 </div>
@@ -28,7 +28,7 @@ export default function PreviewCard({ selected, semSelected, roomSelected, hoste
                         <h1 className="font-bold text-sm">{bunkSelected}</h1>
                     </div>
                     <div>
-                        <button className="w-full bg-blue-900 text-white py-2 rounded-md mt-4">Book Hostel</button>
+                        <button onClick={handleNext} className="w-full bg-blue-900 text-white py-2 rounded-md mt-4">Book Hostel</button>
                     </div>
                 </div>
             </div>

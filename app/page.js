@@ -8,6 +8,7 @@ import { CheckIcon, ChevronUpDownIcon } from '@heroicons/react/20/solid'
 import BookHostel from "./components/flows/BookHostel";
 import SelectRoom from "./components/flows/SelectRoom";
 import PreviewCard from "./components/flows/PreviewCard";
+import SuccessCard from "./components/flows/SuccessCard";
 
 const options = [
   {
@@ -99,7 +100,9 @@ export default function Home() {
     } else if(page === 1) {
         return <SelectRoom hostelOptions={hostelOptions} roomOptions={roomOptions} bunkOptions={bunkOptions} roomSelected={roomSelected} hostelSelected={hostelSelected} bunkSelected={bunkSelected} setRoomSelected={setRoomSelected} setHostelSelected={setHostelSelected} setBunkSelected={setBunkSelected} handleNext={handleNext} />
     } else if(page === 2) {
-        return <PreviewCard selected={selected} semSelected={semSelected} roomSelected={roomSelected} hostelSelected={hostelSelected} bunkSelected={bunkSelected} />
+        return <PreviewCard selected={selected} semSelected={semSelected} roomSelected={roomSelected} hostelSelected={hostelSelected} bunkSelected={bunkSelected} handleNext={handleNext} />
+    } else if(page === 3) {
+        return <SuccessCard handleNext={handleNext} />
     }
     // } else if(page === 2) {
     //     return <PreferInfo handleNext={handleNext} handlePrev={handlePrev} goTo={goTo} pdata={pdata} setPdata={setPdata} />

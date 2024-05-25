@@ -13,7 +13,7 @@ export default function BookHostel({ options, semOptions, setSelected, selected,
     return (
         <div className="w-9/12">
             <div className="w-full h-screen justify-center flex items-center">
-            <div className="w-6/12 mx-auto bg-[#E2E2E2] rounded-md border border-gray-300 p-16 flex justify-center flex-col items-center">
+            <div className="w-6/12 mx-auto bg-blue-200/10 rounded-md border border-gray-300 p-16 flex justify-center flex-col items-center">
                 <div>
                 <h1 className="font-semibold text-lg mb-3">Book a hostel</h1>
                 </div>
