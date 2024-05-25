@@ -2,7 +2,7 @@
 import Link from "next/link";
 import { useEffect, useState } from "react";
 
-export default function SuccessCard({ handleNext }) {
+export default function SuccessCard({ handleNext, resetPage }) {
     const [closeModal, setCloseModal] = useState(false);
 
     useEffect(()=> {
@@ -26,7 +26,7 @@ export default function SuccessCard({ handleNext }) {
                             </div>
                             <div className="w-full flex flex-col gap-2 mt-8">
                                 <button className="w-full text-white bg-blue-900 rounded-md py-2">Print Hostel Card</button>
-                                <Link href={'/'} className="w-full border border-blue-900 text-blue-900 py-2 rounded-md flex justify-center items-center">Go back to Dashboard</Link>
+                                <button onClick={resetPage} href={'/'} className="w-full border border-blue-900 text-blue-900 py-2 rounded-md">Go back to Dashboard</button>
                             </div>
                         </div>
                     </div>
@@ -44,7 +44,7 @@ export default function SuccessCard({ handleNext }) {
                             </div>
                             <div className="w-full flex flex-col gap-2 mt-8">
                                 <button className="w-full text-white bg-blue-900 rounded-md py-2">Print Hostel Card</button>
-                                <Link href={'/'} className="w-full border border-blue-900 text-blue-900 py-2 rounded-md flex justify-center items-center">Go back to Dashboard</Link>
+                                <button onClick={resetPage} className="w-full border border-blue-900 text-blue-900 py-2 rounded-md">Go back to Dashboard</button>
                             </div>
                         </div>
                     </div>

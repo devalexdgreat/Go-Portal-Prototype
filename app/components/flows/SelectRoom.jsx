@@ -4,15 +4,22 @@ import Image from "next/image";
 import { Fragment, useState } from 'react'
 import { Label, Listbox, ListboxButton, ListboxOption, ListboxOptions, Transition } from '@headlessui/react'
 import { CheckIcon, ChevronUpDownIcon } from '@heroicons/react/20/solid'
+import { GoArrowLeft } from "react-icons/go";
 
 function classNames(...classes) {
     return classes.filter(Boolean).join(' ')
 }
 
-export default function SelectRoom({ hostelOptions, roomOptions, bunkOptions, roomSelected, hostelSelected, bunkSelected, setRoomSelected, setHostelSelected, setBunkSelected, handleNext }) {
+export default function SelectRoom({ hostelOptions, roomOptions, bunkOptions, roomSelected, hostelSelected, bunkSelected, setRoomSelected, setHostelSelected, setBunkSelected, handleNext, handlePrev, resetPage }) {
     return (
         <div className="w-9/12">
-            <div className="w-full h-screen justify-center flex items-center">
+            <div className="w-full h-screen justify-center flex items-center relative">
+            <div className="w-full absolute top-10">
+                <div className="w-11/12 mx-auto flex justify-between">
+                    <button onClick={handlePrev} className="flex gap-1 items-center justify-center"><GoArrowLeft /><span>Go Back</span></button>
+                    <button onClick={resetPage}>Cancel</button> 
+                </div>
+            </div>
             <div className="w-6/12 mx-auto bg-blue-200/10 rounded-md border border-gray-300 p-16 flex justify-center flex-col items-center">
                 <div>
                 <h1 className="font-semibold text-lg mb-3">Choose a Room</h1>

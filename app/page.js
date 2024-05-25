@@ -98,30 +98,26 @@ export default function Home() {
     if(page === 0) {
         return <BookHostel options={options} semOptions={semOptions} setSelected={setSelected} selected={selected} semSelected={semSelected} setSemSelected={setSemSelected} handleNext={handleNext} />
     } else if(page === 1) {
-        return <SelectRoom hostelOptions={hostelOptions} roomOptions={roomOptions} bunkOptions={bunkOptions} roomSelected={roomSelected} hostelSelected={hostelSelected} bunkSelected={bunkSelected} setRoomSelected={setRoomSelected} setHostelSelected={setHostelSelected} setBunkSelected={setBunkSelected} handleNext={handleNext} />
+        return <SelectRoom hostelOptions={hostelOptions} roomOptions={roomOptions} bunkOptions={bunkOptions} roomSelected={roomSelected} hostelSelected={hostelSelected} bunkSelected={bunkSelected} setRoomSelected={setRoomSelected} setHostelSelected={setHostelSelected} setBunkSelected={setBunkSelected} handleNext={handleNext} handlePrev={handlePrev} resetPage={resetPage} />
     } else if(page === 2) {
-        return <PreviewCard selected={selected} semSelected={semSelected} roomSelected={roomSelected} hostelSelected={hostelSelected} bunkSelected={bunkSelected} handleNext={handleNext} />
+        return <PreviewCard selected={selected} semSelected={semSelected} roomSelected={roomSelected} hostelSelected={hostelSelected} bunkSelected={bunkSelected} handleNext={handleNext} handlePrev={handlePrev} resetPage={resetPage} />
     } else if(page === 3) {
-        return <SuccessCard handleNext={handleNext} />
+        return <SuccessCard handleNext={handleNext} resetPage={resetPage} />
     }
-    // } else if(page === 2) {
-    //     return <PreferInfo handleNext={handleNext} handlePrev={handlePrev} goTo={goTo} pdata={pdata} setPdata={setPdata} />
-    // } else if(page === 3) {
-    //     return <GoalInfo handleNext={handleNext} handlePrev={handlePrev} goTo={goTo} pdata={pdata} setPdata={setPdata} />
-    // } else if(page === 4) {
-    //     return <TcInfo handleNext={handleNext} handlePrev={handlePrev} goTo={goTo} />
-    // } else if(page === 5) {
-    //     return <CfmPage handleNext={handleNext} handlePrev={handlePrev} goTo={goTo} />
-    // } else if(page === 6) {
-    //     return <OkPage handleNext={handleNext} handlePrev={handlePrev} goTo={goTo} />
-    // } else {
-    //     return <OkPage handleNext={handleNext} handlePrev={handlePrev} goTo={goTo} />
-    // }
     
 }
 
   const handleNext = () => {
     setPage((currPage) => currPage + 1);
+  }
+
+  const handlePrev = () => {
+    setPage((currPage) => currPage - 1);
+  }
+
+  const resetPage = () => {
+    setPage(0);
+    window.location.reload(false);
   }
 
   return (

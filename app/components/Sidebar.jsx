@@ -26,13 +26,16 @@ export default function Sidebar() {
                     </Link>
                 </div>
                 <div className="w-full mt-10 text-[#DADADA]">
-                    <div className="w-10/12 mx-auto">
-                        <Link href={'/dashboard'} className="py-3 flex items-center gap-2" alt=""><RiDashboardFill className="h-5 w-5" /><span>Dashboard</span></Link>
-                        <button onClick={toggleHostel} className="py-3 flex items-center justify-between w-full" alt="">
-                            <span className="flex gap-2 items-center">
-                                <HiOfficeBuilding className="h-5 w-5" /><span>Hostel</span>
-                            </span>
-                            <IoChevronDown />
+                    <div className="">
+                        <Link href={'/'} className="w-10/12 mx-auto py-3 flex items-center gap-2" alt=""><RiDashboardFill className="h-5 w-5" /><span>Dashboard</span></Link>
+                        <button onClick={toggleHostel} className="border-s-4 bg-gradient-to-r from-green-400/10 to-transparent border-green-400 py-3 w-full" alt="">
+                            <div className="w-10/12 mx-auto flex items-center justify-between">
+                                <span className="flex gap-2 items-center">
+                                    <HiOfficeBuilding className="h-5 w-5" /><span>Hostel</span>
+                                </span>
+                                <IoChevronDown />
+                            </div>
+                            
                         </button>
                         {open ? ( 
                             <div className="ps-3">

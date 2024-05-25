@@ -1,7 +1,15 @@
-export default function PreviewCard({ selected, semSelected, roomSelected, hostelSelected, bunkSelected, handleNext }) {
+import { GoArrowLeft } from "react-icons/go";
+
+export default function PreviewCard({ selected, semSelected, roomSelected, hostelSelected, bunkSelected, handleNext, handlePrev, resetPage }) {
     return (
         <div className="w-9/12">
-            <div className="w-full h-screen justify-center flex items-center">
+            <div className="w-full h-screen justify-center flex items-center relative">
+            <div className="w-full absolute top-10">
+                <div className="w-11/12 mx-auto flex justify-between">
+                    <button onClick={handlePrev} className="flex gap-1 items-center justify-center"><GoArrowLeft /><span>Go Back</span></button>
+                    <button onClick={resetPage}>Cancel</button> 
+                </div>
+            </div>
             <div className="w-6/12 mx-auto bg-blue-200/10 rounded-md border border-gray-300 p-10 flex justify-center flex-col items-center">
                 <div>
                 <h1 className="font-semibold text-lg mb-4">Book Hostel Preview</h1>
