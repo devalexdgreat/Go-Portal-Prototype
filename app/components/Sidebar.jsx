@@ -39,8 +39,8 @@ export default function Sidebar() {
                         </button>
                         {open ? ( 
                             <div className="ps-9">
-                                <Link href={'/dashboard'} className="py-3 flex items-center gap-2" alt=""><BsDot className="text-green-500 h-6 w-6" /><span>Choose Hostel</span></Link>
-                                <Link href={'/dashboard'} className="py-3 flex items-center gap-2" alt=""><BsDot className="text-red-500 h-6 w-6" /><span>Hostel History</span></Link>
+                                <Link href={'#'} className="py-3 flex items-center gap-2" alt=""><BsDot className="text-green-500 h-6 w-6" /><span>Choose Hostel</span></Link>
+                                <Link href={'#'} className="py-3 flex items-center gap-2" alt=""><BsDot className="text-red-500 h-6 w-6" /><span>Hostel History</span></Link>
                             </div>
                         ):(
                             <div></div>
@@ -48,10 +48,10 @@ export default function Sidebar() {
                     </div>
                     <hr className="h-0.5 my-3" />
                     <div className="w-10/12 mx-auto">
-                        <Link href={'/dashboard'} className="py-3 flex items-center gap-2" alt="">
+                        <Link href={'#'} className="py-3 flex items-center gap-2" alt="">
                         <GiWallet className="h-5 w-5" /><span>Payment</span></Link>
-                        <Link href={'/dashboard'} className="py-3 flex items-center gap-2" alt=""><PiNotepadFill className="h-5 w-5" /><span>Course Registration</span></Link>
-                        <Link href={'/dashboard'} className="py-3 flex items-center gap-2" alt=""><PiReceiptFill className="h-5 w-5" /><span>Result</span></Link>
+                        <Link href={'#'} className="py-3 flex items-center gap-2" alt=""><PiNotepadFill className="h-5 w-5" /><span>Course Registration</span></Link>
+                        <Link href={'#'} className="py-3 flex items-center gap-2" alt=""><PiReceiptFill className="h-5 w-5" /><span>Result</span></Link>
                     </div>
                     
                 </div>
